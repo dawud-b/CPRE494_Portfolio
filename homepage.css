@@ -1,0 +1,268 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-padding-top: 2rem;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/************* Navbar *************/
+.navbar {
+  background: #ffffff;
+  position: fixed;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  box-shadow: 0 2px 6px rgb(0, 0, 0, 0.1);
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 2rem;
+}
+.nav-links a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #007acc;
+  transition: all 0.25s;
+}
+.nav-links a:hover {
+  color: #005998;
+}
+
+/*************** Intro ***************/
+.intro {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: #fff;
+}
+.intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.intro p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+.btn-primary {
+  background: #007acc;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.5s;
+}
+.btn-primary:hover {
+  background: #005998;
+}
+
+/* Sections (for about) */
+.section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.light-bg {
+  background: #d3e9f6;
+}
+
+.section h3 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+.section p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+/************ Projects ***************/
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.project-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.project-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+.project-card p {
+  font-size: 1rem;
+  margin: auto 0;
+  margin-bottom: 0.6rem;
+}
+.project-card a {
+  color: #2c92d6;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+.project-card a:hover {
+  color: #11659d;
+}
+
+/* Used for project dates*/
+.date {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+/****************** Contact **************/
+.social-links a {
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  color: #2c92d6;
+  text-decoration: none;
+  transition: 0.25s;
+}
+.social-links a:hover {
+  color: #11659d;
+}
+.contact-info-bg {
+  background: #e8e8e8;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.8rem;
+  background: #e8e8e8;
+}
+
+/**************** About ******************/
+.coursework {
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+  max-width: 750px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.coursework h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #007acc;
+}
+
+.coursework details {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 0.5rem 0;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease;
+}
+
+.coursework details:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.coursework summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.coursework summary::-webkit-details-marker {
+  display: none; /* remove default arrow */
+}
+
+/* Custom caret */
+.coursework summary::after {
+  content: "▸";
+  font-size: 0.9rem;
+  transition: transform 0.25s ease;
+  color: #005fa3;
+}
+.coursework details[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.coursework details p {
+  padding: 0 1rem 1rem;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Note for where the courses were taken */
+.course-note a {
+  color: #005fa3;
+  text-decoration: none;
+}
+.course-note a:hover {
+  text-decoration: underline;
+  color: #00477a;
+}
+
+.awards {
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+  max-width: 750px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.awards h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #007acc;
+}
+
+.awards ul {
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  align-items: center;
+}
+
+.inner-list {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.inner-list li::before {
+  content: "- ";
+}
+
+.cpre494 a {
+  color: #005fa3;
+  text-decoration: none;
+}
